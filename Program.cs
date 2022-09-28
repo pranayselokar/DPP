@@ -1,30 +1,23 @@
-﻿namespace LeapYear
+﻿// See https://aka.ms/new-console-template for more information
+namespace EmployeeCheck
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int y;
-            Console.WriteLine(" Please enter the year in four digits ");
-            y = Convert.ToInt32(Console.ReadLine());
+            int IS_FULL_TIME = 1;
+            Random random = new Random();
+            int empcheck = random.Next(0, 2);
 
-            if ((y % 400) == 0 && (y % 4) == 0) ;
+            if (empcheck == IS_FULL_TIME)
             {
-                Console.WriteLine(" It is a leap year " + y);
+                Console.WriteLine("Employee is Present");
             }
-     
-            else if ((y % 100) == 0) ;
-            {
-                Console.WriteLine(" It is not a leap year " + y);
-            }
-
             else
             {
-                Console.WriteLine(" It is not a leap year" + y);
+                Console.WriteLine("Employee is Absent");
             }
+
         }
     }
 }
-            
-           
-
